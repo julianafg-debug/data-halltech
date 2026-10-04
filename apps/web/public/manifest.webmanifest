@@ -1,0 +1,19 @@
+{
+  "name": "Central Hall",
+  "short_name": "Central Hall",
+  "description": "Atendimento e solicitações do seu condomínio.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f5f7",
+  "theme_color": "#244b42",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

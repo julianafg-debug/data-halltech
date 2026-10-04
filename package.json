@@ -1,0 +1,26 @@
+{
+  "name": "central-hall",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Aplicacao web responsiva Central Hall",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c green,blue \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm run dev --workspace @central-hall/api",
+    "dev:web": "npm run dev --workspace @central-hall/web",
+    "start": "npm run start --workspace @central-hall/api",
+    "build": "npm run build --workspace @central-hall/api && npm run build --workspace @central-hall/web",
+    "typecheck": "npm run typecheck --workspace @central-hall/api && npm run typecheck --workspace @central-hall/web",
+    "test": "npm run test --workspace @central-hall/api",
+    "db:migrate": "npm run db:migrate --workspace @central-hall/api",
+    "db:seed": "npm run db:seed --workspace @central-hall/api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.8.3",
+    "tsx": "^4.19.3"
+  }
+}
